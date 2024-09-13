@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es5", // Pode manter ou alterar conforme necessário
+    "lib": ["es2017", "dom"], // Inclua 'es2017' ou uma versão mais recente
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
