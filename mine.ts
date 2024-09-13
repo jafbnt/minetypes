@@ -1,3 +1,4 @@
+// Mapeamento de extensões para MIME Types
 const mimeMap: Record<string, string[]> = {
   "audio/aac": [".aac"],
   "application/x-abiword": [".abw"],
@@ -71,12 +72,12 @@ const mimeMap: Record<string, string[]> = {
   "audio/3gpp": [".3gp"],
   "video/3gpp2": [".3g2"],
   "audio/3gpp2": [".3g2"],
-  "application/x-7z-compressed": [".7z"],
+  "application/x-7z-compressed": [".7z"]
 };
 
 export function extension(mimeType: string): string | undefined {
-  const extension = Object.keys(mimeMap).find((key) => mimeMap[key].includes(mimeType));
-  return extension || undefined;
+  const extensions = mimeMap[mimeType];
+  return extensions ? extensions[0] : undefined;
 }
 
 export function mineType(extension: string): string | undefined {
